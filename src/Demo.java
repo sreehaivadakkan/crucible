@@ -11,7 +11,7 @@ public class Demo<E> {
         con  = (LinkedList<E>[])(new LinkedList[10]);
     }
 
-    public boolean add(E obj) {
+public boolean add(E obj) {
         int oldSize = size;
         int index = Math.abs(obj.hashCode()) % con.length;
         if(con[index] == null)
@@ -26,7 +26,7 @@ public class Demo<E> {
         return oldSize != size;
     }
 
-    private void resize() {
+private void resize() {
         Demo<E> temp = new Demo<E>();
         temp.con = (LinkedList<E>[])(new LinkedList[con.length * 2 + 1]);
         for(int i = 0; i < con.length; i++){
@@ -38,6 +38,7 @@ public class Demo<E> {
     }
 
     public int size() {
+        System.out.println(size());
         return size;
     }
 }
