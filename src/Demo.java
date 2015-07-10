@@ -36,7 +36,7 @@ private void resize() {
         }
         con = temp.con;
     }
-    
+
     public void sample(String s){
         System.out.println("Sample is "+s);
     }
